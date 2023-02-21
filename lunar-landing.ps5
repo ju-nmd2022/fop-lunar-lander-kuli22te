@@ -3,6 +3,15 @@ background(14, 42, 84);
 let x = 200;
 let y = 250;
 
+//Stars array
+
+let starY = [];
+let starX = [];
+
+//Forloop stars and position
+for(let i=0; i < 600; i++)
+
+
 //ground
 
 fill(101, 94, 94);

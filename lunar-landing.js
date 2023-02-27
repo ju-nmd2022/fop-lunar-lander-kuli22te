@@ -32,3 +32,38 @@ function ground() {
 }
 
 ground();
+
+//spaceship
+
+function spaceship() {
+  push();
+  fill(51, 51, 51);
+  noStroke();
+  ellipse(85, 380, 50, 80);
+  fill(225);
+  noStroke();
+  rect(70, 360, 30, 10, 5);
+  pop();
+}
+
+spaceship();
+
+//starting pad
+
+function start() {
+  fill(45, 41, 41);
+  noStroke();
+  rect(45, 430, 80, 20, 5);
+}
+
+start();
+
+// landing pad
+
+function end() {
+  fill(45, 41, 41);
+  noStroke();
+  rect(505, 430, 80, 20, 5);
+}
+
+end();

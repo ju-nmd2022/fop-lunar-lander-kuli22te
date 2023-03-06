@@ -1,13 +1,27 @@
-//background
-background(4, 22, 44);
+// Game settings
+const gravity = 0.15;
+const groundlevel = 300;
+let spaceshipX = 350;
+let spaceshipY = 0;
+let gameState = "start";
+let rotation = 0;
+let speed = 0;
 
-// stars
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  frameRate(50);
+
+  //background
+  background(4, 22, 44);
+}
+
+// stars array variable
 let starA = [];
 let starB = [];
 
 for (let i = 0; i < 1250; i++) {
-  const a = Math.floor(Math.random() * width);
-  const b = Math.floor(Math.random() * height);
+  const a = Math.floor(Math.random() * 1500);
+  const b = Math.floor(Math.random() * 1200);
 
   starA.push(a);
   starB.push(b);
@@ -28,7 +42,7 @@ function stars() {
 function ground() {
   noStroke();
   fill(101, 94, 94);
-  rect(0, 500, 1200, 1200);
+  rect(0, 500, 1526, 1200);
 }
 
 //spaceship
@@ -38,14 +52,78 @@ function spaceship(spaceshipX, spaceshipY) {
   translate(spaceshipX, spaceshipY);
   fill(51, 51, 51);
   noStroke();
-  ellipse(-25, -35, 50, 80);
+  ellipse(-25, -30, 50, 80);
   fill(225);
   noStroke();
   rect(-39, -60 + 10, 30, 10, 5);
   pop();
 }
 
-//rainbow trees
+// Tree count starts from the left
+
+//rainbow tree1
+
+//red
+
+fill(214, 26, 26);
+noStroke();
+rect(90, 450, 10, 90);
+
+//yellow
+
+fill(228, 195, 76);
+noStroke();
+rect(100, 450, 10, 90);
+
+//Green
+
+fill(106, 228, 76);
+noStroke();
+rect(110, 450, 10, 90);
+
+//Blue
+
+fill(76, 109, 228);
+noStroke();
+rect(120, 450, 10, 90);
+
+//purple
+
+fill(143, 76, 228);
+noStroke();
+rect(130, 450, 10, 90);
+
+//Pink
+
+fill(216, 76, 228);
+noStroke();
+rect(140, 450, 10, 90);
+
+//cloud
+
+//Cloud ball left
+
+fill(255);
+noStroke();
+ellipse(88, 435, 45, 45);
+
+//Cloud ball middle
+
+fill(255);
+noStroke();
+ellipse(120, 425, 45, 45);
+
+//Cloud ball right
+
+fill(255);
+noStroke();
+ellipse(150, 435, 45, 45);
+
+//Cloud ball bottom
+
+fill(255);
+noStroke();
+ellipse(119, 443, 100, 50);
 
 //Restart function
 
@@ -61,28 +139,23 @@ function restart() {
 
 function start() {
   clear();
+  background();
   stars();
   ground();
+  tree1();
   textSize(30);
   fill(143, 76, 228);
   text("Start playing by clicking your mose", 90, 255);
 }
 
-// Game settings
-const gravity = 0.16;
-const groundlevel = 300;
-let spaceshipX = 350;
-let spaceshipY = 0;
-let gameState = "start";
-let rotation = 0;
-let speed = 0;
-
 // game functions
 
 function gameMechanics() {
   clear();
+  background();
   stars();
   ground(groundlevel);
+  tree1();
   spaceship(spaceshipX, spaceshipY);
 
   if (keyIsDown(38)) {
@@ -96,13 +169,14 @@ function gameMechanics() {
   if (spaceshipY - 205 > groundlevel) {
     if (
       spaceshipX <= groundlevel + 55 &&
-      spaceship >= groundlevel - 10 &&
+      spaceshipY >= groundlevel - 10 &&
       speed <= 5
     ) {
       spaceshipY = groundlevel + 205;
       gameState = "win";
     } else {
       clear();
+      background();
       stars();
       ground(groundlevel);
       gameState = "lose";

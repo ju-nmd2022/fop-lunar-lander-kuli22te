@@ -10,14 +10,14 @@ let speed = 0;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(50);
-
-  //background
   background(4, 22, 44);
 }
 
 // stars array variable
 let starA = [];
 let starB = [];
+
+// forloop to creat stars and deciding random positioning
 
 for (let i = 0; i < 1250; i++) {
   const a = Math.floor(Math.random() * 1500);
@@ -63,68 +63,69 @@ function spaceship(spaceshipX, spaceshipY) {
 
 //rainbow tree1
 
-//red
+function tree1() {
+  //red
 
-fill(214, 26, 26);
-noStroke();
-rect(90, 450, 10, 90);
+  fill(214, 26, 26);
+  noStroke();
+  rect(90, 450, 10, 90);
 
-//yellow
+  //yellow
 
-fill(228, 195, 76);
-noStroke();
-rect(100, 450, 10, 90);
+  fill(228, 195, 76);
+  noStroke();
+  rect(100, 450, 10, 90);
 
-//Green
+  //Green
 
-fill(106, 228, 76);
-noStroke();
-rect(110, 450, 10, 90);
+  fill(106, 228, 76);
+  noStroke();
+  rect(110, 450, 10, 90);
 
-//Blue
+  //Blue
 
-fill(76, 109, 228);
-noStroke();
-rect(120, 450, 10, 90);
+  fill(76, 109, 228);
+  noStroke();
+  rect(120, 450, 10, 90);
 
-//purple
+  //purple
 
-fill(143, 76, 228);
-noStroke();
-rect(130, 450, 10, 90);
+  fill(143, 76, 228);
+  noStroke();
+  rect(130, 450, 10, 90);
 
-//Pink
+  //Pink
 
-fill(216, 76, 228);
-noStroke();
-rect(140, 450, 10, 90);
+  fill(216, 76, 228);
+  noStroke();
+  rect(140, 450, 10, 90);
 
-//cloud
+  //cloud
 
-//Cloud ball left
+  //Cloud ball left
 
-fill(255);
-noStroke();
-ellipse(88, 435, 45, 45);
+  fill(255);
+  noStroke();
+  ellipse(88, 435, 45, 45);
 
-//Cloud ball middle
+  //Cloud ball middle
 
-fill(255);
-noStroke();
-ellipse(120, 425, 45, 45);
+  fill(255);
+  noStroke();
+  ellipse(120, 425, 45, 45);
 
-//Cloud ball right
+  //Cloud ball right
 
-fill(255);
-noStroke();
-ellipse(150, 435, 45, 45);
+  fill(255);
+  noStroke();
+  ellipse(150, 435, 45, 45);
 
-//Cloud ball bottom
+  //Cloud ball bottom
 
-fill(255);
-noStroke();
-ellipse(119, 443, 100, 50);
-
+  fill(255);
+  noStroke();
+  ellipse(119, 443, 100, 50);
+}
 //Restart function
 
 function restart() {
@@ -139,7 +140,7 @@ function restart() {
 
 function start() {
   clear();
-  background();
+  background(4, 22, 44);
   stars();
   ground();
   tree1();
@@ -152,7 +153,7 @@ function start() {
 
 function gameMechanics() {
   clear();
-  background();
+  background(4, 22, 44);
   stars();
   ground(groundlevel);
   tree1();

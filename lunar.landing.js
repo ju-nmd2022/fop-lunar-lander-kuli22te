@@ -177,7 +177,7 @@ function gameMechanics() {
       gameState = "win";
     } else {
       clear();
-      background();
+      background(4, 22, 44);
       stars();
       ground(groundlevel);
       gameState = "lose";
@@ -201,7 +201,7 @@ function win() {
 
 // If lose and restart
 function lose() {
-  textSize(40);
+  textSize(80);
   fill(214, 25, 25);
   text("YOU LOSE", 130, 205);
 

@@ -1,4 +1,4 @@
-// Game settings
+//Game "settings"
 const gravity = 0.15;
 const groundlevel = 300;
 let spaceshipX = 350;
@@ -13,59 +13,50 @@ function setup() {
   background(4, 22, 44);
 }
 
-// stars array variable
-let starA = [];
-let starB = [];
+//Stars array variable
+let starU = [];
+let starZ = [];
 
-// forloop to creat stars and deciding random positioning
+// Forloop creating stars and deciding random position
+for (let i = 0; i < 800; i++) {
+  const u = Math.floor(Math.random() * 1500);
+  const z = Math.floor(Math.random() * 1200);
 
-for (let i = 0; i < 1250; i++) {
-  const a = Math.floor(Math.random() * 1500);
-  const b = Math.floor(Math.random() * 1200);
-
-  starA.push(a);
-  starB.push(b);
+  starU.push(u);
+  starZ.push(z);
 }
 
-// stars
-
+//look of stars
 function stars() {
   noStroke();
-  fill(225);
-  for (let index in starA) {
-    ellipse(starA[index], starB[index], 3);
+  fill(255);
+  for (let index in starU) {
+    ellipse(starU[index], starZ[index], 3);
   }
 }
 
-// ground
-
-function ground() {
-  noStroke();
+//Planet
+function planet() {
   fill(101, 94, 94);
-  rect(0, 500, 1526, 1200);
+  rect(0, 500, 1526, 800);
 }
 
-//spaceship
-
+//Spaceship
 function spaceship(spaceshipX, spaceshipY) {
   push();
   translate(spaceshipX, spaceshipY);
   fill(51, 51, 51);
-  noStroke();
-  ellipse(-25, -30, 50, 80);
+  ellipse(400, -30, 50, 80);
   fill(225);
-  noStroke();
-  rect(-39, -60 + 10, 30, 10, 5);
+  rect(385, -60 + 10, 30, 10, 5);
   pop();
 }
+// Trees starting from the left
 
-// Tree count starts from the left
-
-//rainbow tree1
+// Tree1
 
 function tree1() {
   //red
-
   fill(214, 26, 26);
   noStroke();
   rect(90, 450, 10, 90);
@@ -88,7 +79,7 @@ function tree1() {
   noStroke();
   rect(120, 450, 10, 90);
 
-  //purple
+  //Purple
 
   fill(143, 76, 228);
   noStroke();
@@ -100,7 +91,7 @@ function tree1() {
   noStroke();
   rect(140, 450, 10, 90);
 
-  //cloud
+  //Cloud
 
   //Cloud ball left
 
@@ -120,15 +111,15 @@ function tree1() {
   noStroke();
   ellipse(150, 435, 45, 45);
 
-  //Cloud ball bottom
+  //Cloud ball bottum
 
   fill(255);
   noStroke();
   ellipse(119, 443, 100, 50);
 }
-//Restart function
 
-function restart() {
+//Fuinction to restart the game
+function reset() {
   spaceshipX = 350;
   spaceshipY = 0;
   gameState = "start";
@@ -136,26 +127,24 @@ function restart() {
   speed = 0;
 }
 
-//Functions to display first screen
-
+// Function to show start screen (first screen)
 function start() {
   clear();
   background(4, 22, 44);
   stars();
-  ground();
+  planet();
   tree1();
   textSize(30);
   fill(143, 76, 228);
-  text("Start playing by clicking your mose", 90, 255);
+  text("Start playing by clicking your mouse", 540, 255);
 }
 
-// game functions
-
+//game functions
 function gameMechanics() {
   clear();
   background(4, 22, 44);
   stars();
-  ground(groundlevel);
+  planet(groundlevel);
   tree1();
   spaceship(spaceshipX, spaceshipY);
 
@@ -164,13 +153,13 @@ function gameMechanics() {
   }
 
   speed = speed + gravity;
-  spaceshipY = spaceshipX + Math.cos(rotation) * speed;
+  spaceshipY = spaceshipY + Math.cos(rotation) * speed;
   spaceshipX = spaceshipX - Math.sin(rotation) * speed;
 
   if (spaceshipY - 205 > groundlevel) {
     if (
       spaceshipX <= groundlevel + 55 &&
-      spaceshipY >= groundlevel - 10 &&
+      spaceshipX >= groundlevel - 10 &&
       speed <= 5
     ) {
       spaceshipY = groundlevel + 205;
@@ -179,46 +168,44 @@ function gameMechanics() {
       clear();
       background(4, 22, 44);
       stars();
-      ground(groundlevel);
+      planet(groundlevel);
       gameState = "lose";
     }
   }
 }
 
-// if win and restart
-
+//If win and restart
 function win() {
   textSize(80);
   fill(106, 228, 76);
-  text("YOU WIN", 155, 205);
+  text("YOU WIN", 555, 205);
 
   textSize(40);
-  text("Press space to restart", 146, 275);
+  text("press space to restart", 546, 275);
   if (keyIsDown(32)) {
-    restart();
+    reset();
   }
 }
 
-// If lose and restart
+// If lose and restat
 function lose() {
   textSize(80);
   fill(214, 25, 25);
-  text("YOU LOSE", 130, 205);
+  text("YOU LOSE", 530, 205);
 
   textSize(40);
-  text("Press space to restart", 146, 275);
+  text("press space to restart", 546, 275);
   if (keyIsDown(32)) {
-    restart();
+    reset();
   }
 }
 
-//function play game
+// Function to play the game
 function mouseClicked() {
   gameState = "game";
 }
 
-//GameStates deciding which screen to show
-
+// Different gamestates deciding what screen to show
 function draw() {
   if (gameState === "start") {
     start();

@@ -118,6 +118,70 @@ function tree1() {
   ellipse(119, 443, 100, 50);
 }
 
+// Tree2
+function tree2() {
+  //red
+  fill(214, 26, 26);
+  noStroke();
+  rect(380, 550, 10, 90);
+
+  //yellow
+
+  fill(228, 195, 76);
+  noStroke();
+  rect(390, 550, 10, 90);
+
+  //Green
+
+  fill(106, 228, 76);
+  noStroke();
+  rect(400, 550, 10, 90);
+
+  //Blue
+
+  fill(76, 109, 228);
+  noStroke();
+  rect(410, 550, 10, 90);
+
+  //Purple
+
+  fill(143, 76, 228);
+  noStroke();
+  rect(420, 550, 10, 90);
+
+  //Pink
+
+  fill(216, 76, 228);
+  noStroke();
+  rect(430, 550, 10, 90);
+
+  //Cloud
+
+  //Cloud ball left
+
+  fill(255);
+  noStroke();
+  ellipse(383, 535, 45, 45);
+
+  //Cloud ball middle
+
+  fill(255);
+  noStroke();
+  ellipse(413, 525, 45, 45);
+
+  //Cloud ball right
+
+  fill(255);
+  noStroke();
+  ellipse(443, 535, 45, 45);
+
+  //Cloud ball bottum
+
+  fill(255);
+  noStroke();
+  ellipse(412, 543, 99, 50);
+}
+
 //Fuinction to restart the game
 function reset() {
   spaceshipX = 350;
@@ -134,6 +198,7 @@ function start() {
   stars();
   planet();
   tree1();
+  tree2();
   textSize(30);
   fill(143, 76, 228);
   text("Start playing by clicking your mouse", 540, 255);
@@ -146,6 +211,7 @@ function gameMechanics() {
   stars();
   planet(groundlevel);
   tree1();
+  tree2();
   spaceship(spaceshipX, spaceshipY);
 
   if (keyIsDown(38)) {

@@ -51,7 +51,7 @@ function spaceship(spaceshipX, spaceshipY) {
   rect(385, -60 + 10, 30, 10, 5);
   pop();
 }
-// Trees starting from the left
+// Big trees starting from the left
 
 // Tree1
 
@@ -189,37 +189,37 @@ function tree3() {
   //red
   fill(214, 26, 26);
   noStroke();
-  rect(1100, 450, 10, 90);
+  rect(1130, 450, 10, 90);
 
   //yellow
 
   fill(228, 195, 76);
   noStroke();
-  rect(1110, 450, 10, 90);
+  rect(1140, 450, 10, 90);
 
   //Green
 
   fill(106, 228, 76);
   noStroke();
-  rect(1120, 450, 10, 90);
+  rect(1150, 450, 10, 90);
 
   //Blue
 
   fill(76, 109, 228);
   noStroke();
-  rect(1130, 450, 10, 90);
+  rect(1160, 450, 10, 90);
 
   //Purple
 
   fill(143, 76, 228);
   noStroke();
-  rect(1140, 450, 10, 90);
+  rect(1170, 450, 10, 90);
 
   //Pink
 
   fill(216, 76, 228);
   noStroke();
-  rect(1150, 450, 10, 90);
+  rect(1180, 450, 10, 90);
 
   //Cloud
 
@@ -227,25 +227,25 @@ function tree3() {
 
   fill(255);
   noStroke();
-  ellipse(1100, 435, 45, 45);
+  ellipse(1130, 435, 45, 45);
 
   //Cloud ball middle
 
   fill(255);
   noStroke();
-  ellipse(1132, 425, 45, 45);
+  ellipse(1162, 425, 45, 45);
 
   //Cloud ball right
 
   fill(255);
   noStroke();
-  ellipse(1162, 435, 45, 45);
+  ellipse(1192, 435, 45, 45);
 
   //Cloud ball bottum
 
   fill(255);
   noStroke();
-  ellipse(1130, 443, 100, 50);
+  ellipse(1160, 443, 100, 50);
 }
 
 // Tree4
@@ -313,6 +313,199 @@ function tree4() {
   ellipse(1380, 593, 100, 50);
 }
 
+// Small trees starting from the right
+
+// Tree4
+
+function tree5() {
+  //red
+  fill(214, 26, 26);
+  noStroke();
+  rect(220, 630, 8, 90);
+
+  //yellow
+
+  fill(228, 195, 76);
+  noStroke();
+  rect(228, 630, 8, 90);
+
+  //Green
+
+  fill(106, 228, 76);
+  noStroke();
+  rect(236, 630, 8, 90);
+
+  //Blue
+
+  fill(76, 109, 228);
+  noStroke();
+  rect(244, 630, 8, 90);
+
+  //Purple
+
+  fill(143, 76, 228);
+  noStroke();
+  rect(252, 630, 8, 90);
+
+  //Pink
+
+  fill(216, 76, 228);
+  noStroke();
+  rect(260, 630, 8, 90);
+
+  //Cloud
+
+  //Cloud ball left
+
+  fill(255);
+  noStroke();
+  ellipse(215, 623, 45, 45);
+
+  //Cloud ball middle
+
+  fill(255);
+  noStroke();
+  ellipse(246, 609, 45, 45);
+
+  //Cloud ball right
+
+  fill(255);
+  noStroke();
+  ellipse(277, 623, 45, 45);
+
+  //Cloud ball bottum
+
+  fill(255);
+  noStroke();
+  ellipse(245, 633, 100, 50);
+}
+
+function tree6() {
+  //red
+  fill(214, 26, 26);
+  noStroke();
+  rect(730, 600, 8, 80);
+
+  //yellow
+
+  fill(228, 195, 76);
+  noStroke();
+  rect(738, 600, 8, 80);
+
+  //Green
+
+  fill(106, 228, 76);
+  noStroke();
+  rect(746, 600, 8, 80);
+
+  //Blue
+
+  fill(76, 109, 228);
+  noStroke();
+  rect(754, 600, 8, 80);
+
+  //Purple
+
+  fill(143, 76, 228);
+  noStroke();
+  rect(762, 600, 8, 80);
+
+  //Pink
+
+  fill(216, 76, 228);
+  noStroke();
+  rect(770, 600, 8, 80);
+
+  //Cloud
+
+  //Cloud ball left
+
+  fill(255);
+  noStroke();
+  ellipse(730, 600, 45, 45);
+
+  //Cloud ball middle
+
+  fill(255);
+  noStroke();
+  ellipse(757, 587, 45, 45);
+
+  //Cloud ball right
+
+  fill(255);
+  noStroke();
+  ellipse(785, 600, 45, 45);
+
+  //Cloud ball bottum
+
+  fill(255);
+  noStroke();
+  ellipse(757, 612, 88, 40);
+}
+
+function tree7() {
+  //red
+  fill(214, 26, 26);
+  noStroke();
+  rect(968, 560, 8, 80);
+
+  //yellow
+
+  fill(228, 195, 76);
+  noStroke();
+  rect(976, 560, 8, 80);
+
+  //Green
+
+  fill(106, 228, 76);
+  noStroke();
+  rect(984, 560, 8, 80);
+
+  //Blue
+
+  fill(76, 109, 228);
+  noStroke();
+  rect(992, 560, 8, 80);
+
+  //Purple
+
+  fill(143, 76, 228);
+  noStroke();
+  rect(1000, 560, 8, 80);
+
+  //Pink
+
+  fill(216, 76, 228);
+  noStroke();
+  rect(1008, 560, 8, 80);
+
+  //Cloud
+
+  //Cloud ball left
+
+  fill(255);
+  noStroke();
+  ellipse(970, 550, 45, 45);
+
+  //Cloud ball middle
+
+  fill(255);
+  noStroke();
+  ellipse(990, 540, 45, 45);
+
+  //Cloud ball right
+
+  fill(255);
+  noStroke();
+  ellipse(1010, 550, 45, 45);
+
+  //Cloud ball bottum
+
+  fill(255);
+  noStroke();
+  ellipse(990, 558, 80, 40);
+}
+
 //Fuinction to restart the game
 function reset() {
   spaceshipX = 350;
@@ -332,6 +525,9 @@ function start() {
   tree2();
   tree3();
   tree4();
+  tree5();
+  tree6();
+  tree7();
   textSize(30);
   fill(143, 76, 228);
   text("Start playing by clicking your mouse", 540, 255);
@@ -347,6 +543,9 @@ function gameMechanics() {
   tree2();
   tree3();
   tree4();
+  tree5();
+  tree6();
+  tree7();
   spaceship(spaceshipX, spaceshipY);
 
   if (keyIsDown(38)) {
